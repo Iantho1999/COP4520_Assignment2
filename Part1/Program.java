@@ -38,7 +38,6 @@ class Guest extends Thread
     @Override
     public void run()
     {
-        int i;
         while (maze.finished == false)
         {
             maze.lock.lock();
@@ -118,8 +117,8 @@ public class Program
 
         MasterGuest m = new MasterGuest(1, maze);
         
+        // Start the threads, beginning with the master guest
         guests[0] = m;
-
         m.start();
 
         for (i = 1; i < maze.numGuests; i++)
@@ -129,6 +128,7 @@ public class Program
             g.start();
         }
 
+        // Attempt to join the threads
         try 
         {
             for (i = 0; i < maze.numGuests; i++)
