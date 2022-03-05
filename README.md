@@ -11,9 +11,6 @@ java Program
 
 ## Documentation
 
-### Overview
-For this assignment, I have opted to use Java as a programming language for both parts. When I started the assignment, I was originally going to use C#; however, I ultimately switched to Java in order to avoid any complications with running C# code in Linux.
-
 ### Part 1
 The problem proposed in this part is similar to the prisoner problem shown in class. In this case, the best strategy is to have a master guest with a counter for how many guests have entered the maze. If the maze has a cupcake present and the guest traversing it has not yet eaten one, they should eat the cupcake. Otherwise, they should do nothing. Each time the master guest traverses the maze, it keeps track of whether or not the cupcake is currently present; if it’s not, then increment the counter by one and request a new cupcake. Once this counter is equal to the number of guests, you can safely assume that all guests have entered the maze. In my program, the guests are each represented with their own thread.
 
