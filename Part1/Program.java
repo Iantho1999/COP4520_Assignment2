@@ -110,7 +110,7 @@ public class Program
         int i;
 
         // Instantiate the Maze class with a given number of guests, and print
-        Maze maze = new Maze(3);
+        Maze maze = new Maze(100);
         System.out.println("Number of Guests: " + Maze.numGuests);
 
         Guest[] guests = new Guest[maze.numGuests];
